@@ -1,0 +1,7 @@
+Personal Projects
+
+Resume Website
+Chess/Snake Game
+2D easy progression game
+IOS app (calculator, to-do list, maybe a app for counting cases at work)
+2D simulation game
