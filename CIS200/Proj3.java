@@ -79,33 +79,39 @@ public class Proj3 {
                         else if (input == 's' || input == 'S'){p1Total+=p1Turn;break;}
                     }
                     else {
-                        //"algorithm"
-                        aiRoll = true; aiRollCount = 0;
-                        while (aiRoll){
-                            System.out.printf("\nComputer turn total is %d. Enter (r)oll or (s)top: Computer ",aiTurn);
+                        //"algorithm" 
+                        aiRoll = true; aiRollCount = 0; aiTurn = 0;
                             for (int j = 0; j < 2; j++){
                                 if (aiTurn < WIN){
-                                    System.out.println("rolls.");
+                                    System.out.printf("\nComputer turn total is %d. Computer rolls.\n",aiTurn);
                                     System.out.printf("Computer rolled: %d\n", dice = rand.nextInt(1, 7));
                                     if (dice == 1){aiTurn = 0; aiRoll = false; break;}
                                     else{aiTurn+=dice;}
                                 }
-                                else{System.out.println("stops.");aiRoll = false;}
+                                else{System.out.printf("\nComputer turn total is %d. Computer stops.\n",aiTurn); aiRoll = false; dice = 1;}
                             }
-                            if ((aiTurn<10) && (p1Total >= 13 && aiTotal < 10)){
-                                //see if the computer only rolls one or until the above if statement become false. Add print statement for the current score print line. Also the turn over thing.
+                            if ((aiTurn<10) && p1Total >= 13 && aiTotal < 10){
+                                while (aiTurn < 10) {
+                                    System.out.printf("\nComputer turn total is %d. Computer rolls.\n",aiTurn);
+                                    System.out.printf("Computer rolled: %d\n", dice = rand.nextInt(1, 7));
+                                    if (dice == 1){aiRoll = false; break;}
+                                    else{aiTurn+=dice;}
+                                }
                             }
-                        }
                     }   
 
 
                 } while (dice != 1);
                 System.out.println("Turn over.");
-                System.out.printf("Current score: Player 1 has %d, Player 2 has %d\n", p1Total, p2Total);
+                System.out.printf("Current score: You have %d, Computer has %d\n", p1Total, aiTotal);
                 if (p1Total >= WIN){p1Win = true;break;}
-                else if (p2Total >= WIN){p2Win = true;break;}
+                else if (aiTotal >= WIN){aiWin = true;break;}
             }
         }
+        if (p1Win){System.out.println("\n\nYou win!");}
+        else if (aiWin){System.out.println("Computer wins!");}
+        //computer sets aiTurn to 0 after 2 rolls
+        
     
     
     
