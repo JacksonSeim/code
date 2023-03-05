@@ -3,7 +3,7 @@
 * <Jackson Seim / Thursday 4:30pm - 6:20pm>  
 * 
 *
-* <#######> 
+* <Proj3 is a text based java game that runs off of "dice" or a random number generator that generates a number 1-6. Part 1 is a game between 2 players and once they reach 20 the game ends automaticlly. Part 2 is a game between a player and an AI it is the same game and ends when one of the "players" reaches 20.> 
 */
 import java.util.*;
 import java.util.Scanner;
