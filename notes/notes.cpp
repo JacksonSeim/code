@@ -1,6 +1,7 @@
 //Starter code for a C++ file
 #include<iostream> 
 #include<string>
+#include<cmath>
 using namespace std;
 
 int main() {
@@ -74,7 +75,96 @@ int main() {
     getline (cin, fullName); //if "John Doe" is inputed the "John Doe" is saved
     */
 
-   //                                                                                                   MATH
+   /*                                                                                               MATH
+    cout << max(5, 10); //finds the max of x and y, prints out 10
+    cout << min(5, 10); //finds the min of x and y, prints out 5
+
+    //#include<cmath> gives functions sqrt(x), round (y), and log(x) *natural log*
+    //as well as many more including the trig functions
+    */
+
+   /*                                                                                    IF ELSE STATEMENTS/SWITCH
+    int x = 1;
+    int y = 2;
+    if (x < y){
+        cout << y << "\n";
+    }
+    else if (x == y){
+        cout << 0 << "\n";
+    }
+    else {
+        cout << x << "\n";
+    }
+
+    int t = 20;
+    int result = (t < 18) ? 10 : 5; //prints 5, syntax is (condition) ? if condition true it does this : if false it does this;
+    cout << result;
+
+    switch (x) {
+        case 0: //if x == 0:
+            cout<<"your mom";
+            break;
+        case 1: //if x == 1:
+            cout<<"your dad";
+            break;
+        default: //runs this if there is no case match
+            "your sister";
+    }
+    */
+
+   /*                                                                                       LOOPS
+   int input;
+   cin >> input;
+   while (input != -1){
+    cin >> input;
+    cout << input << "input: \n";
+   }
+   int i = 0;
+   while (i < 5){
+    cout << i << "\n";
+    i++;
+   }
+
+   for (int i = 0; i < 5; i++){
+    cout << i << "\n";
+   }
+
+   int myNumbers[5] = {10, 20, 30, 40, 50};
+   for (int i: myNumbers){
+    cout << i << "\n";
+   }
+
+   // break; and continue; work like always
+   */
+
+  /*                                                                                      ARRAYS
+  int num[10];
+  int sum[2] = {1, 2};// just int sum[] = {1,2}; also works
+  
+  cout << sum[1];//prints 2;
+  num[0] = 0; //num[0] now equals 0
+  
+  int size = sizeof(num);//returns 40 because sizeof gives the size in bytes 4 bytes X 10 elements = 40
+  size = sizeof(num)/sizeof(int);//returns 10
+
+    int nums[3][3];
+    int nums1[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+    */
+
+   //                                                                                           FUNCTIONS
+   //CLASSES/OBJECTS
+   //FILES
+
+
+
+
+
+
+
 
 
 
